@@ -1,5 +1,8 @@
 package main
 
 func main() {
-    print("hello from module")
+    var message string = "hello form go"
+    var price = 34.5
+
+    print(message, price)
 }
