@@ -1,5 +1,6 @@
 package main
-import ("example.com/go/io/data"; "fmt")
+// import ("example.com/go/io/data"; "fmt")
+import ("fmt")
 
 
 func calculateTax(price float32) (float32, float32) {
@@ -12,11 +13,17 @@ func calculateTaxWithName (price float32) (stateTax float32, fedaralTax float32)
     return
 }
 
+func birdDay(age *int) {
+    *age++
+}
+
 func main() {
     // how to use functions and multiple return values
-    _, federalTax := calculateTaxWithName(100)
-
-    fmt.Println(federalTax)
-    fmt.Println(data.MinSpeed)
-	printData()
+    // _, federalTax := calculateTaxWithName(100)
+    age :=26
+    birdDay(&age)
+    fmt.Println(age)
+    // fmt.Println(federalTax)
+    // fmt.Println(data.MinSpeed)
+	// printData()
 }
