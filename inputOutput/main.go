@@ -14,6 +14,9 @@ func calculateTaxWithName (price float32) (stateTax float32, fedaralTax float32)
 }
 
 func birdDay(age *int) {
+    if(*age > 140){
+        panic("Invalid age")
+    }
     *age++
 }
 
