@@ -10,10 +10,13 @@ import (
 func main() {
 	rootPath, _ := os.Getwd()
 
-	c, err := fileutils.ReadTextFile(rootPath + "/data/text.txt")
+	filepath := rootPath + "/data"
+
+	c, err := fileutils.ReadTextFile(fmt.Sprintf("%v/text.txt", filepath))
 	if err != nil {
 		fmt.Printf("Error: %v", err)
 	} else {
+		fileutils.WriteToFile(fmt.Sprintf("%v/output.txt", filepath), "Hello World")
 		fmt.Println(c)
 	}
 
