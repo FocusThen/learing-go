@@ -13,8 +13,6 @@ func (origin location) destinationTo(destination location) string{
 
 func locationTest(){
     ist := location("Istanbul")
-
     ist.destinationTo("Ankara")
-
     fmt.Println(ist)
 }
